@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="headerfootercolor">#1A212C</color>
     <color name="backgroundcolordark">#181918</color>
+    <color name="settings_list_item">#353434</color>
 </resources>

@@ -9,54 +9,41 @@
     tools:context=".SettingsScreen">
 
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:background="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="70dp"
+        android:background="@color/headerfootercolor"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
-    <Button
-        android:id="@+id/ReturnBtn"
-        android:layout_width="72dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:backgroundTint="#1F1E1E"
-        android:text="<"
-        android:textColor="#E2E0E0"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@id/toolbar4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/toolbar4" />
-
-    <TextView
-        android:id="@+id/SettingsLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Settings"
-        android:textColor="#EBE5E5"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/toolbar4"
-        app:layout_constraintBottom_toBottomOf="@id/toolbar4"
-        app:layout_constraintStart_toEndOf="@id/ReturnBtn"
-        android:layout_marginStart="16dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        app:backgroundTint="#0B0B0B"
+        android:layout_height="70dp"
+        app:backgroundTint="@color/headerfootercolor"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="BottomAppBar" />
 
+
+    <TextView
+        android:id="@+id/SettingsLabel"
+        android:layout_width="76dp"
+        android:layout_height="30dp"
+        android:text="Settings"
+        android:textColor="#EBE5E5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar4"
+        app:layout_constraintVertical_bias="0.027" />
 
     <ScrollView
         android:id="@+id/settingsScroll"
@@ -88,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="My Profile                                                                             >"
                 android:textColor="#EBE7E7" />
@@ -98,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Account                                                                                >"
                 android:textColor="#E7E3E3" />
@@ -108,7 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Notifications                                                                         >"
                 android:textColor="#E6E3E3" />
@@ -118,7 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Email Notifications"
                 android:textColor="#E6E4E4" />
@@ -128,7 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Photo and Video"
                 android:textColor="#DBD8D8" />
@@ -138,7 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Blocked Chats"
                 android:textColor="#E9E8E8" />
@@ -148,7 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Blocked Posts, Comments"
                 android:textColor="#D5D2D2" />
@@ -158,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Translation"
                 android:textColor="#E4DFDF" />
@@ -168,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Set Dark Mode"
                 android:textColor="#FFFFFF" />
@@ -188,7 +175,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Text-To-Speech"
                 android:textColor="#FFFFFF" />
@@ -198,7 +185,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Text Size"
                 android:textColor="#FFFFFF" />
@@ -208,7 +195,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Audio And Visual"
                 android:textColor="#FFFFFF" />
@@ -218,7 +205,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Subtitles"
                 android:textColor="#FFFFFF" />
@@ -228,7 +215,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Narration"
                 android:textColor="#FFFFFF" />
@@ -238,7 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Advanced"
                 android:textColor="#FFFFFF" />
@@ -258,12 +245,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="#1A1A1A"
+                android:background="@color/settings_list_item"
                 android:padding="12dp"
                 android:text="Help And Support"
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
