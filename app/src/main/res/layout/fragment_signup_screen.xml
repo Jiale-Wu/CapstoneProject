@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/header_signup"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:background="@color/headerfootercolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -93,19 +93,22 @@
         android:id="@+id/signupwith"
         android:layout_width="122dp"
         android:layout_height="37dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="48dp"
         android:text="Sign up with: "
+        android:textAlignment="center"
         android:textColor="#050505"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordbox" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616" />
 
     <Button
         android:id="@+id/gmailbutton"
         android:layout_width="156dp"
         android:layout_height="46dp"
-        android:layout_marginStart="136dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#D9D9D9"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +118,7 @@
         android:id="@+id/yahoobutton"
         android:layout_width="156dp"
         android:layout_height="46dp"
-        android:layout_marginStart="136dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#D9D9D9"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,6 +130,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#888484"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -135,7 +139,7 @@
         android:id="@+id/facebookbutton"
         android:layout_width="156dp"
         android:layout_height="46dp"
-        android:layout_marginStart="136dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#D9D9D9"
         app:layout_constraintStart_toStartOf="parent"
@@ -190,7 +194,7 @@
         android:layout_height="31dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/img"
+        android:src="@drawable/facebook_icon"
         app:layout_constraintStart_toStartOf="@+id/facebookbutton"
         app:layout_constraintTop_toTopOf="@+id/facebookbutton" />
 
