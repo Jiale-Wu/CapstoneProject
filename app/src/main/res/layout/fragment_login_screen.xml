@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginScreen">
+    android:background="#64A455"
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="173dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="244dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bandlogo" />
+
+    <Button
+        android:id="@+id/signupbutton"
+        android:layout_width="154dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="115dp"
+        android:text="Sign Up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/bandname"
+        android:layout_width="338dp"
+        android:layout_height="304dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/band_name_as" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/moreoptions"
+        android:layout_width="109dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="71dp"
+        android:text="More Options"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="154dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="18dp"
+        android:text="Log In"
+        app:layout_constraintBottom_toTopOf="@+id/signupbutton"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
