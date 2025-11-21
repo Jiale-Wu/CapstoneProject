@@ -18,7 +18,6 @@
         android:layout_height="0dp"
         android:fillViewport="true"
         android:clipToPadding="false"
-        app:layout_constraintTop_toBottomOf="@id/toolbar4"
         app:layout_constraintBottom_toTopOf="@id/bottomAppBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -221,23 +220,7 @@
     </ScrollView>
     <!--BOTTOM BAR SECTION-->
     <!-- Tried to fix bottom Bar-->
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        app:backgroundTint="@color/headerfootercolor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar4"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:background="@color/headerfootercolor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/SettingsLabel"
@@ -272,20 +255,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/SettingsLabel"
-        android:layout_width="76dp"
-        android:layout_height="30dp"
-        android:text="Settings"
-        android:textColor="#EBE5E5"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/toolbar4"
-        app:layout_constraintVertical_bias="0.027" />
 
     <ImageView
         android:id="@+id/back_button"
