@@ -10,42 +10,38 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="173dp"
+        android:layout_width="140dp"
         android:layout_height="140dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="244dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.399"
         app:srcCompat="@drawable/bandlogo" />
+
 
     <Button
         android:id="@+id/signupbutton"
         android:layout_width="154dp"
         android:layout_height="61dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="115dp"
+        android:backgroundTint="@color/white"
         android:text="Sign Up"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/bandname"
-        android:layout_width="338dp"
-        android:layout_height="304dp"
-        android:layout_marginStart="36dp"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/band_name_as" />
+        app:layout_constraintVertical_bias="0.841" />
 
     <TextView
         android:id="@+id/moreoptions"
         android:layout_width="109dp"
         android:layout_height="20dp"
-        android:layout_marginEnd="133dp"
-        android:layout_marginBottom="71dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="68dp"
         android:text="More Options"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -54,9 +50,25 @@
         android:id="@+id/loginbutton"
         android:layout_width="154dp"
         android:layout_height="61dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginBottom="18dp"
+        android:backgroundTint="@color/white"
         android:text="Log In"
-        app:layout_constraintBottom_toTopOf="@+id/signupbutton"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="344dp"
+        android:layout_height="267dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/band_title_logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
