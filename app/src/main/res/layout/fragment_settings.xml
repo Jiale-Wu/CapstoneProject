@@ -6,50 +6,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
-    tools:context=".SettingsScreen">
-
+    tools:context=".Settings">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:background="@color/headerfootercolor"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        app:backgroundTint="@color/headerfootercolor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="BottomAppBar" />
-
 
     <TextView
         android:id="@+id/SettingsLabel"
-        android:layout_width="76dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
         android:text="Settings"
         android:textColor="#EBE5E5"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/toolbar4"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.372" />
 
+    <!-- The back button keeps Disappearing-->
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back_button"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar4"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar4" />
+
+    <!--SCROLL VIEW SECTION-->
     <ScrollView
         android:id="@+id/settingsScroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
+        android:clipToPadding="false"
         app:layout_constraintTop_toBottomOf="@id/toolbar4"
         app:layout_constraintBottom_toTopOf="@id/bottomAppBar"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,204 +64,200 @@
                 android:id="@+id/GeneralLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:text="General"
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:id="@+id/Profiletxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="My Profile >"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="My Profile                                                                             >"
                 android:textColor="#EBE7E7" />
 
             <TextView
                 android:id="@+id/Accounttxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Account >"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Account                                                                                >"
                 android:textColor="#E7E3E3" />
 
             <TextView
                 android:id="@+id/Notificationtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Notifications >"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Notifications                                                                         >"
                 android:textColor="#E6E3E3" />
 
             <TextView
                 android:id="@+id/emailtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Email Notifications"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Email Notifications"
                 android:textColor="#E6E4E4" />
 
             <TextView
                 android:id="@+id/Phototxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Photo and Video"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Photo and Video"
                 android:textColor="#DBD8D8" />
 
             <TextView
                 android:id="@+id/BlockedTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Blocked Chats"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Blocked Chats"
                 android:textColor="#E9E8E8" />
 
             <TextView
                 android:id="@+id/BlockedPostTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Blocked Posts, Comments"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Blocked Posts, Comments"
                 android:textColor="#D5D2D2" />
 
             <TextView
                 android:id="@+id/Translationtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Translation"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Translation"
                 android:textColor="#E4DFDF" />
 
             <TextView
                 android:id="@+id/SetDarkModetxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Set Dark Mode"
+                android:padding="12dp"
                 android:layout_marginBottom="16dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Set Dark Mode"
                 android:textColor="#FFFFFF" />
 
-            <!-- ACCESSIBILITY SECTION -->
             <TextView
                 android:id="@+id/AccessibilityLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:text="Accessibility"
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:id="@+id/TextToSpeechtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Text-To-Speech"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Text-To-Speech"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/TextSizetxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Text Size"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Text Size"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/AudioVisualtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Audio And Visual"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Audio And Visual"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/SubtitlesCaptioningtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Subtitles"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Subtitles"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/Narrationtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Narration"
+                android:padding="12dp"
                 android:layout_marginBottom="2dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Narration"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/Advancedtxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Advanced"
+                android:padding="12dp"
                 android:layout_marginBottom="16dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Advanced"
                 android:textColor="#FFFFFF" />
-
 
             <TextView
                 android:id="@+id/OtherLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:text="Other"
                 android:textColor="#000000"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:id="@+id/HelpSupporttxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Help And Support"
+                android:padding="12dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/settings_list_item"
-                android:padding="12dp"
-                android:text="Help And Support"
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>
     </ScrollView>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/back_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+    <!--BOTTOM BAR SECTION-->
+    <!-- Tried to fix bottom Bar-->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:backgroundTint="@color/headerfootercolor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
