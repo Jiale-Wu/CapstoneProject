@@ -33,15 +33,4 @@ public class ChatFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    ChatListener mListener;
-
-    public interface ChatListener {
-
-    }
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        mListener = (ChatListener) context;
-    }
 }
