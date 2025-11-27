@@ -10,6 +10,7 @@
         android:layout_width="80dp"
         android:layout_height="35dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="@color/settings_list_item"
         android:text="Invite"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/userNameText"

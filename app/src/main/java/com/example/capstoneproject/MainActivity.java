@@ -8,7 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements LoginScreen.LoginListener, SignupScreen.SignupListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +23,29 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.main, new LoginScreen())
                 .commit();
+
+    }
+
+    @Override
+    public void Signin() {
+
+    }
+
+    @Override
+    public void Signup() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new SignupScreen())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void LoginMoreOptions() {
+
+    }
+
+    @Override
+    public void SignupNext() {
+        getSupportFragmentManager().popBackStack();
     }
 }
