@@ -1,220 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
 
     <!-- Scrollable content area (everything except bottom nav) -->
-    <ScrollView
-        android:id="@+id/home_scroll"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+    <LinearLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/headerfootercolor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/bandlogo" />
+
+        <!-- Search bar -->
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_weight="1"
+            android:background="@drawable/rounded_background"
+            android:hint="Search for new Bands!"
+            android:inputType="text"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="12sp" />
 
-            <!-- ========== TOP BAR ========== -->
-            <LinearLayout
-                android:id="@+id/header_bar"
+        <!-- Search icon -->
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="Search"
+            android:src="@drawable/search_icon2" />
+
+        <!-- Add band icon -->
+        <ImageView
+            android:id="@+id/add_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="Create Band"
+            android:src="@drawable/addgroupicon" />
+
+        <!-- Grid icon -->
+        <ImageView
+            android:id="@+id/grid_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="Grid view"
+            android:src="@drawable/groupsicon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/my_bands_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Bands"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="112dp" />
+
+    <LinearLayout
+        android:id="@+id/band_row_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="158dp">
+
+        <!-- Card 1: Interaction Matrix -->
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/band_card_background"
+            android:orientation="vertical">
+
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/headerfootercolor"
-                android:padding="16dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/interaction_matrix" />
 
-                <!-- Logo -->
-                <ImageView
-                    android:id="@+id/logo"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="12dp"
-                    android:src="@drawable/bandlogo"
-                    android:contentDescription="@string/app_name" />
-
-                <!-- Search bar -->
-                <EditText
-                    android:id="@+id/search_bar"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_background"
-                    android:hint="Search for new Bands!"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:singleLine="true"
-                    android:inputType="text" />
-
-                <!-- Search icon -->
-                <ImageView
-                    android:id="@+id/search_icon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="12dp"
-                    android:src="@drawable/search_icon2"
-                    android:contentDescription="Search" />
-
-                <!-- Add band icon -->
-                <ImageView
-                    android:id="@+id/add_icon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="12dp"
-                    android:src="@drawable/addgroupicon"
-                    android:contentDescription="Create Band" />
-
-                <!-- Grid icon -->
-                <ImageView
-                    android:id="@+id/grid_icon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="12dp"
-                    android:src="@drawable/groupsicon"
-                    android:contentDescription="Grid view" />
-            </LinearLayout>
-
-            <!-- ========== "My Bands" TITLE ========== -->
             <TextView
-                android:id="@+id/my_bands_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="My Bands"
-                android:textSize="22sp"
-                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="Team Project"
                 android:textColor="@color/black" />
-
-            <!-- ========== FIRST ROW OF BAND CARDS ========== -->
-            <LinearLayout
-                android:id="@+id/band_row_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <!-- Card 1: Interaction Matrix -->
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/band_card_background"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/interaction_matrix" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Interaction Matrix"
-                        android:textColor="@color/black" />
-                </LinearLayout>
-
-                <!-- Card 2: Calculus 3 -->
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/band_card_background"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/calculus_3" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Calculus 3"
-                        android:textColor="@color/black" />
-                </LinearLayout>
-
-                <!-- Card 3: Architecture -->
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/band_card_background"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/architecture_blueprint" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Architecture"
-                        android:textColor="@color/black" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- ========== SECOND ROW: CREATE A BAND CARD ========== -->
-            <LinearLayout
-                android:id="@+id/band_row_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:gravity="start"
-                android:orientation="horizontal">
-
-                <!-- Create a Band card -->
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/band_card_background"
-                    android:orientation="vertical">
-
-                    <!-- Inner square with plus -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:gravity="center"
-                        android:background="@color/backgroundcolordark">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="+"
-                            android:textSize="32sp"
-                            android:textColor="@color/black" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Create a Band"
-                        android:textColor="@color/black" />
-                </LinearLayout>
-
-            </LinearLayout>
-
         </LinearLayout>
-    </ScrollView>
+
+        <!-- Card 2: Calculus 3 -->
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/band_card_background"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/calculus_3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Calculus 3"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- Card 3: Architecture -->
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/band_card_background"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/architecture_blueprint" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Architecture"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/band_row_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/band_row_1">
+
+        <!-- Create a Band card -->
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/band_card_background"
+            android:orientation="vertical">
+
+            <!-- Inner square with plus -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/backgroundcolordark"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/black"
+                    android:textSize="32sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Create a Band"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <!-- ========== BOTTOM NAVIGATION BAR ========== -->
     <LinearLayout
