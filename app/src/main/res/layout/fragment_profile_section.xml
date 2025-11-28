@@ -82,14 +82,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView44"
+        android:id="@+id/chat_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
         android:text="Chat"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textView43"
+        app:layout_constraintStart_toEndOf="@+id/event_label"
         app:layout_constraintTop_toBottomOf="@+id/chatButton2" />
 
     <ImageView
@@ -145,7 +145,7 @@
         app:srcCompat="@drawable/chatsnav" />
 
     <TextView
-        android:id="@+id/textView41"
+        android:id="@+id/home_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -156,18 +156,18 @@
         app:layout_constraintTop_toBottomOf="@+id/homeButton3" />
 
     <TextView
-        android:id="@+id/textView43"
+        android:id="@+id/event_label"
         android:layout_width="36dp"
         android:layout_height="17dp"
         android:layout_marginStart="20dp"
         android:text="Events"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textView42"
+        app:layout_constraintStart_toEndOf="@+id/notification_label"
         app:layout_constraintTop_toBottomOf="@+id/eventsButton3" />
 
     <TextView
-        android:id="@+id/textView45"
+        android:id="@+id/profile_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
@@ -176,18 +176,18 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toEndOf="@+id/textView44"
+        app:layout_constraintStart_toEndOf="@+id/chat_label"
         app:layout_constraintTop_toBottomOf="@+id/profileButton3" />
 
     <TextView
-        android:id="@+id/textView42"
+        android:id="@+id/notification_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:text="Notifications"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textView41"
+        app:layout_constraintStart_toEndOf="@+id/home_label"
         app:layout_constraintTop_toBottomOf="@+id/notificationsButton3" />
 
     <ImageView
