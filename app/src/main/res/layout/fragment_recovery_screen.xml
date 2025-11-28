@@ -5,4 +5,124 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/passwordText3"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/band_card_background"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enteremailID" />
+
+    <EditText
+        android:id="@+id/enterUsername"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/band_card_background"
+        android:ems="10"
+        android:hint="Enter Username"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entername" />
+
+    <TextView
+        android:id="@+id/username2"
+        android:layout_width="209dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="160dp"
+        android:fontFamily="@font/oswald"
+        android:text="Recover Credentials:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_signup5" />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="57dp"
+        android:fontFamily="@font/oswald"
+        android:text="OR"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterUsername" />
+
+    <TextView
+        android:id="@+id/entername"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="70dp"
+        android:fontFamily="@font/oswald"
+        android:text="Please enter your username: "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username2" />
+
+    <TextView
+        android:id="@+id/enteremailID"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="68dp"
+        android:fontFamily="@font/oswald"
+        android:text="Please enter your Email ID: "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/or" />
+
+    <TextView
+        android:id="@+id/header_signup5"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/headerfootercolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bandLogo5"
+        android:layout_width="77dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="167dp"
+        android:src="@drawable/bandlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backbutton5"
+        android:layout_width="45dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sendemail"
+        android:layout_width="303dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="63dp"
+        android:backgroundTint="#888484"
+        android:text="Send Recovery Email"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
