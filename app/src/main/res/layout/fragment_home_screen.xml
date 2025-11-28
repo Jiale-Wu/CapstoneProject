@@ -206,13 +206,13 @@
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:layout_height="70dp"
         android:background="@color/headerfootercolor"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <!-- Home -->
         <LinearLayout
@@ -225,8 +225,8 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/homenav"
-                android:contentDescription="Home" />
+                android:contentDescription="Home"
+                android:src="@drawable/homenav" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -247,8 +247,8 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/notificationsnav"
-                android:contentDescription="Notifications" />
+                android:contentDescription="Notifications"
+                android:src="@drawable/notificationsnav" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -269,8 +269,8 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/eventsnav"
-                android:contentDescription="Events" />
+                android:contentDescription="Events"
+                android:src="@drawable/eventsnav" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -291,8 +291,8 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/chatsnav"
-                android:contentDescription="Chat" />
+                android:contentDescription="Chat"
+                android:src="@drawable/chatsnav" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -313,8 +313,8 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/profilenav"
-                android:contentDescription="Profile" />
+                android:contentDescription="Profile"
+                android:src="@drawable/profilenav" />
 
             <TextView
                 android:layout_width="wrap_content"
