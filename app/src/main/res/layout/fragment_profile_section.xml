@@ -159,7 +159,7 @@
         android:id="@+id/textView43"
         android:layout_width="36dp"
         android:layout_height="17dp"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="20dp"
         android:text="Events"
         android:textColor="@color/white"
         android:textSize="12sp"
@@ -194,33 +194,39 @@
         android:id="@+id/back_button3"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/back_button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/pageTitle3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/oswald"
         android:text="Profile"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="15dp" />
+        app:layout_constraintStart_toEndOf="@+id/back_button3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/pageTitle4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="21dp"
         android:fontFamily="@font/oswald"
         android:text="Profile"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="91dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <ImageView
         android:id="@+id/imageView22"
@@ -246,12 +252,13 @@
         android:id="@+id/changePfp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:text="Change Profile Picture"
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView22"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView22" />
 
     <TextView
         android:id="@+id/usernameButton"

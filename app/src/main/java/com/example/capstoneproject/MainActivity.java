@@ -8,7 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity implements LoginScreen.LoginListener, SignupScreen.SignupListener {
+public class MainActivity extends AppCompatActivity implements LoginScreen.LoginListener, SignupScreen.SignupListener, HomeScreen.HomeScreenListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,10 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
 
     @Override
     public void Signin() {
-
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new HomeScreen())
+                .addToBackStack(null)
+                .commit();
     }
 
     @Override
@@ -47,5 +50,45 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
     @Override
     public void SignupNext() {
         getSupportFragmentManager().popBackStack();
+    }
+
+    @Override
+    public void toNotifications() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new NotificationsPage())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void toEvents() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new EventsPage())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void toChat() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new ChatFragment())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void toProfile() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new ProfileSection())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void toHome() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new HomeScreen())
+                .addToBackStack(null)
+                .commit();
     }
 }
