@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/gmailbutton3"
+        android:layout_width="200dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="106dp"
+        android:backgroundTint="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupwith4" />
+
+    <Button
+        android:id="@+id/yahoobutton4"
+        android:layout_width="200dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="106dp"
+        android:backgroundTint="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gmailbutton3" />
+
+    <TextView
+        android:id="@+id/yahoo3"
+        android:layout_width="71dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="132dp"
+        android:fontFamily="@font/oswald"
+        android:text="Yahoo"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gmailbutton3" />
+
+    <ImageView
+        android:id="@+id/yahoopic3"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/yahoopic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gmailbutton3" />
+
+    <Button
+        android:id="@+id/facebookbutton5"
+        android:layout_width="200dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="106dp"
+        android:backgroundTint="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yahoobutton4" />
+
+    <TextView
+        android:id="@+id/facebook3"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/oswald"
+        android:text="Facebook"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="584dp" />
+
+    <ImageView
+        android:id="@+id/facebookpic3"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/facebook_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yahoobutton4" />
+
+    <TextView
+        android:id="@+id/signupwith4"
+        android:layout_width="342dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="35dp"
+        android:text="Sign up with: "
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_signup3" />
+
+    <ImageView
+        android:id="@+id/gmailpic3"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="316dp"
+        android:src="@drawable/gmailpic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.356"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gmail3"
+        android:layout_width="71dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="144dp"
+        android:fontFamily="@font/oswald"
+        android:text="Gmail"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_signup3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/headerfootercolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bandLogo3"
+        android:layout_width="77dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="167dp"
+        android:src="@drawable/bandlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backbutton3"
+        android:layout_width="45dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
