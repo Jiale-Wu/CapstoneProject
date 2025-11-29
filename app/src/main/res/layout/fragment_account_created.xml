@@ -53,7 +53,7 @@
         android:layout_height="316dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="188dp"
-        android:src="@drawable/GreenCorrect"
+        android:src="@drawable/greencorrect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
