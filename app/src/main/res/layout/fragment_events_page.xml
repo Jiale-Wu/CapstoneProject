@@ -31,6 +31,7 @@
         android:fontFamily="@font/oswald"
         android:text="Home"
         android:textColor="#FDFCFC"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.133"
@@ -45,12 +46,13 @@
         android:fontFamily="@font/oswald"
         android:text="Notifications"
         android:textColor="#FDFCFC"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintHorizontal_bias="0.338"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.993" />
+        app:layout_constraintVertical_bias="0.991" />
 
     <TextView
         android:id="@+id/textView47"
@@ -59,12 +61,13 @@
         android:fontFamily="@font/oswald"
         android:text="Events"
         android:textColor="#FDFCFC"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.993" />
+        app:layout_constraintVertical_bias="0.989" />
 
     <TextView
         android:id="@+id/textView48"
@@ -73,9 +76,10 @@
         android:fontFamily="@font/oswald"
         android:text="Chat"
         android:textColor="#FDFCFC"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.991" />
@@ -87,9 +91,10 @@
         android:fontFamily="@font/oswald"
         android:text="Profile"
         android:textColor="#FDFCFC"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.99" />
@@ -123,12 +128,12 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/eventsButton"
         app:layout_constraintTop_toTopOf="@+id/textView"
         app:srcCompat="@drawable/notificationsnav" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/eventsButton"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
