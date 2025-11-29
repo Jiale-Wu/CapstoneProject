@@ -1,12 +1,18 @@
 package com.example.capstoneproject;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.capstoneproject.databinding.FragmentEventsPageBinding;
+import com.example.capstoneproject.databinding.FragmentNotificationsPageBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +23,7 @@ public class EventsPage extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    FragmentEventsPageBinding binding;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -59,6 +66,57 @@ public class EventsPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_events_page, container, false);
+        binding = FragmentEventsPageBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        binding.homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toHome();
+            }
+        });
+        binding.notificationsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toNotifications();
+            }
+        });
+        binding.eventsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toEvents();
+            }
+        });
+        binding.ChatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toChat();
+            }
+        });
+        binding.profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toProfile();
+            }
+        });
+    }
+    EventsPageListener mListener;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        mListener = (EventsPageListener) context;
+    }
+
+    interface EventsPageListener {
+        void toNotifications();
+        void toEvents();
+        void toChat();
+        void toProfile();
+        void toHome();
     }
 }

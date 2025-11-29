@@ -11,24 +11,26 @@
     <LinearLayout
         android:id="@+id/header_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:background="@color/headerfootercolor"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="1dp"
+        android:paddingRight="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <!-- Logo -->
+
+        <!-- Search bar -->
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="12dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/bandlogo" />
 
-        <!-- Search bar -->
         <EditText
             android:id="@+id/search_bar"
             android:layout_width="0dp"
@@ -249,11 +251,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
+        android:fontFamily="@font/oswald"
         android:text="Profile"
-        android:textColor="@color/white"
+        android:textColor="#FDFCFC"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintStart_toEndOf="@+id/textView21"
         app:layout_constraintTop_toBottomOf="@+id/profileButton2" />
 
@@ -261,20 +264,22 @@
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="52dp"
+        android:fontFamily="@font/oswald"
         android:text="Home"
-        android:textColor="@color/white"
+        android:textColor="#FDFCFC"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeButton2" />
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="36dp"
+        android:layout_width="wrap_content"
         android:layout_height="17dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="28dp"
+        android:fontFamily="@font/oswald"
         android:text="Events"
-        android:textColor="@color/white"
+        android:textColor="#FDFCFC"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/textView26"
         app:layout_constraintTop_toBottomOf="@+id/eventsButton2" />
@@ -283,9 +288,10 @@
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
+        android:layout_marginStart="45dp"
+        android:fontFamily="@font/oswald"
         android:text="Chat"
-        android:textColor="@color/white"
+        android:textColor="#FDFCFC"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/textView23"
         app:layout_constraintTop_toBottomOf="@+id/chatButton3" />
@@ -316,9 +322,10 @@
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/oswald"
         android:text="Notifications"
-        android:textColor="@color/white"
+        android:textColor="#FDFCFC"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/notificationsButton2" />
