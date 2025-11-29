@@ -9,7 +9,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity implements LoginScreen.LoginListener, SignupScreen.SignupListener, HomeScreen.HomeScreenListener,
-        NotificationsPage.NotificationsListener, EventsPage.EventsPageListener, ChatFragment.ChatListener, ProfileSection.ProfileSectionListener {
+        NotificationsPage.NotificationsListener, EventsPage.EventsPageListener, ChatFragment.ChatListener, ProfileSection.ProfileSectionListener ,
+        Login_CredentialsScreen.LoginCredentialsListener, RecoveryScreen.RecoveryScreenListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
     @Override
     public void Signin() {
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.main, new HomeScreen())
+                .replace(R.id.main, new Login_CredentialsScreen())
                 .addToBackStack(null)
                 .commit();
     }
@@ -91,5 +92,26 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
                 .replace(R.id.main, new HomeScreen())
                 .addToBackStack(null)
                 .commit();
+    }
+
+    @Override
+    public void SignInNext() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new HomeScreen())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void forgotCredentials() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new RecoveryScreen())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void back() {
+        getSupportFragmentManager().popBackStack();
     }
 }

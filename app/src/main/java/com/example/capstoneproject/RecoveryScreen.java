@@ -1,12 +1,19 @@
 package com.example.capstoneproject;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.example.capstoneproject.databinding.FragmentLoginCredentialsScreenBinding;
+import com.example.capstoneproject.databinding.FragmentRecoveryScreenBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +24,7 @@ public class RecoveryScreen extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    FragmentRecoveryScreenBinding binding;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -59,6 +67,41 @@ public class RecoveryScreen extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recovery_screen, container, false);
+        binding = FragmentRecoveryScreenBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        binding.backbutton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.back();
+            }
+        });
+        binding.sendemail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Please check email for sign in link", Toast.LENGTH_SHORT).show();
+                mListener.back();
+            }
+        });
+    }
+
+    RecoveryScreenListener mListener;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        mListener = (RecoveryScreenListener) context;
+    }
+
+
+
+    interface RecoveryScreenListener {
+        void SignInNext();
+        void forgotCredentials();
+        void back();
     }
 }
