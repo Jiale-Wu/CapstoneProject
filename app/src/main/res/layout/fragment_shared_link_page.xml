@@ -230,25 +230,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.649" />
 
-    <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/circle_alert_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31" />
-
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/oswald"
-        android:text="This link has expired or is invalid."
-        android:textColor="#CC1212"
+        android:text="Link has been copied!"
+        android:textColor="#4CAF50"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
