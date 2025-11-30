@@ -63,11 +63,13 @@
         android:id="@+id/facebook3"
         android:layout_width="130dp"
         android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/oswald"
         android:text="Facebook"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="584dp" />
+        app:layout_constraintStart_toEndOf="@+id/facebookpic3"
+        app:layout_constraintTop_toTopOf="@+id/facebookbutton5" />
 
     <ImageView
         android:id="@+id/facebookpic3"

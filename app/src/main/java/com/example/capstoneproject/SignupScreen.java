@@ -85,7 +85,12 @@ public class SignupScreen extends Fragment {
                 }
             }
         });
-
+        binding.backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.back();
+            }
+        });
     }
 
     SignupListener mListener;
@@ -98,6 +103,7 @@ public class SignupScreen extends Fragment {
 
     interface SignupListener {
         void SignupNext();
+        void back();
 
     }
 }

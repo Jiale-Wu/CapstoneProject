@@ -46,7 +46,10 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
 
     @Override
     public void LoginMoreOptions() {
-
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new SignupInstead())
+                .addToBackStack(null)
+                .commit();
     }
 
     @Override
