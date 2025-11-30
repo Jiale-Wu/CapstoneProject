@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity implements LoginScreen.LoginListener, SignupScreen.SignupListener, HomeScreen.HomeScreenListener,
         NotificationsPage.NotificationsListener, EventsPage.EventsPageListener, ChatFragment.ChatListener, ProfileSection.ProfileSectionListener ,
-        Login_CredentialsScreen.LoginCredentialsListener, RecoveryScreen.RecoveryScreenListener {
+        Login_CredentialsScreen.LoginCredentialsListener, RecoveryScreen.RecoveryScreenListener, Settings.SettingsListener, ProfilePicture.ProfilePictureListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,5 +116,37 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
     @Override
     public void back() {
         getSupportFragmentManager().popBackStack();
+    }
+
+    @Override
+    public void toSettings() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new Settings())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void toAccountDetails() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new AccountDetails())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void toAdvancedAccessibility() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new AdvancedSettings())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void toChangePFP() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new ProfilePicture())
+                .addToBackStack(null)
+                .commit();
     }
 }

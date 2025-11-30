@@ -11,19 +11,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.capstoneproject.databinding.FragmentProfilePictureBinding;
 import com.example.capstoneproject.databinding.FragmentProfileSectionBinding;
-import com.example.capstoneproject.databinding.FragmentSettingsBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Settings#newInstance} factory method to
+ * Use the {@link ProfilePicture#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Settings extends Fragment {
+public class ProfilePicture extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    FragmentSettingsBinding binding;
+    FragmentProfilePictureBinding binding;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -31,7 +31,7 @@ public class Settings extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Settings() {
+    public ProfilePicture() {
         // Required empty public constructor
     }
 
@@ -41,11 +41,11 @@ public class Settings extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Settings.
+     * @return A new instance of fragment ProfilePicture.
      */
     // TODO: Rename and change types and number of parameters
-    public static Settings newInstance(String param1, String param2) {
-        Settings fragment = new Settings();
+    public static ProfilePicture newInstance(String param1, String param2) {
+        ProfilePicture fragment = new ProfilePicture();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,50 +66,35 @@ public class Settings extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentSettingsBinding.inflate(inflater, container, false);
+        binding = FragmentProfilePictureBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.backButton.setOnClickListener(new View.OnClickListener() {
+        binding.backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mListener.back();
             }
         });
-        binding.Profiletxt.setOnClickListener(new View.OnClickListener() {
+        binding.imgEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.toProfile();
-            }
-        });
-        binding.Advancedtxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mListener.toAdvancedAccessibility();
-            }
-        });
-        binding.Accounttxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mListener.toAccountDetails();
+
             }
         });
     }
-    SettingsListener mListener;
+    ProfilePictureListener mListener;
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        mListener = (SettingsListener) context;
+        mListener = (ProfilePictureListener) context;
     }
 
-    interface SettingsListener {
+    interface ProfilePictureListener {
         void back();
-        void toProfile();
-        void toAccountDetails();
-        void toAdvancedAccessibility();
     }
 }

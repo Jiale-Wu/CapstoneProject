@@ -11,6 +11,7 @@
         android:id="@+id/settingsButton"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginTop="1dp"
         android:background="@color/settings_list_item"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pronounButton" />
@@ -20,16 +21,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="5dp"
         android:text="Settings >"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/usernameButton"
-        app:layout_constraintTop_toTopOf="@+id/usernameButton" />
+        app:layout_constraintTop_toTopOf="@+id/settingsButton" />
 
     <TextView
         android:id="@+id/pronounButton"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginTop="1dp"
         android:background="@color/settings_list_item"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameButton" />
@@ -39,11 +41,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="5dp"
         android:text="Pronouns >"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/usernameButton"
-        app:layout_constraintTop_toTopOf="@+id/usernameButton" />
+        app:layout_constraintTop_toTopOf="@+id/pronounButton" />
 
     <TextView
         android:id="@+id/biosButton"
@@ -269,6 +271,7 @@
         android:id="@+id/usernameButton"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginTop="1dp"
         android:background="@color/settings_list_item"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/biosButton" />

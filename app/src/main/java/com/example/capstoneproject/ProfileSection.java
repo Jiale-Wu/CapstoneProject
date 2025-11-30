@@ -109,6 +109,18 @@ public class ProfileSection extends Fragment {
                 mListener.toHome();
             }
         });
+        binding.settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toSettings();
+            }
+        });
+        binding.changePfp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toChangePFP();
+            }
+        });
     }
 
     ProfileSectionListener mListener;
@@ -125,5 +137,7 @@ public class ProfileSection extends Fragment {
         void toChat();
         void toProfile();
         void toHome();
+        void toSettings();
+        void toChangePFP();
     }
 }
