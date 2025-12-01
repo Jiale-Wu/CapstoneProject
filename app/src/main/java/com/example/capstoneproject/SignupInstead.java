@@ -88,7 +88,7 @@ public class SignupInstead extends Fragment {
         mListener = (SignupInsteadListener) context;
     }
 
-    interface SignupInsteadListener {
+    public interface SignupInsteadListener {
         void back();
     }
 }
