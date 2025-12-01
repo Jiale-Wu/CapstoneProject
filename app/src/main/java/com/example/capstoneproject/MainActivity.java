@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity implements LoginScreen.LoginListener, SignupScreen.SignupListener, HomeScreen.HomeScreenListener,
         NotificationsPage.NotificationsListener, EventsPage.EventsPageListener, ChatFragment.ChatListener, ProfileSection.ProfileSectionListener ,
         Login_CredentialsScreen.LoginCredentialsListener, RecoveryScreen.RecoveryScreenListener, Settings.SettingsListener, ProfilePicture.ProfilePictureListener, AccountDetails.AccDetailListener,
-        AdvancedSettings.AdvancedSettingsListener {
+        AdvancedSettings.AdvancedSettingsListener, SignupInstead.SignupInsteadListener, GroupCreation.GroupCreationListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +99,14 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
     }
 
     @Override
+    public void createBand() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new GroupCreation())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
     public void SignInNext() {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.main, new HomeScreen())
@@ -147,6 +155,14 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
     public void toChangePFP() {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.main, new ProfilePicture())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void goToChatSettings() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main, new ChatSettings())
                 .addToBackStack(null)
                 .commit();
     }
