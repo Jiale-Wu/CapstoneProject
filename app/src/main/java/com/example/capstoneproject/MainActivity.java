@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity implements LoginScreen.LoginListener, SignupScreen.SignupListener, HomeScreen.HomeScreenListener,
         NotificationsPage.NotificationsListener, EventsPage.EventsPageListener, ChatFragment.ChatListener, ProfileSection.ProfileSectionListener ,
         Login_CredentialsScreen.LoginCredentialsListener, RecoveryScreen.RecoveryScreenListener, Settings.SettingsListener, ProfilePicture.ProfilePictureListener, AccountDetails.AccDetailListener,
-        AdvancedSettings.AdvancedSettingsListener, SignupInstead.SignupInsteadListener, GroupCreation.GroupCreationListener {
+        AdvancedSettings.AdvancedSettingsListener, SignupInstead.SignupInsteadListener, GroupCreation.GroupCreationListener, ChatSettings.ChatSettingsListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
