@@ -1,47 +1,35 @@
 package com.example.capstoneproject;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ChatSettings#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.capstoneproject.databinding.ChatSettingsRecyclerViewBinding;
+import com.example.capstoneproject.databinding.FragmentChatSettingsBinding;
+import com.example.capstoneproject.databinding.FragmentHomeScreenBinding;
+
+import java.util.ArrayList;
+
 public class ChatSettings extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public ChatSettings() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ChatSettings.
-     */
-    // TODO: Rename and change types and number of parameters
+    FragmentChatSettingsBinding binding;
+
     public static ChatSettings newInstance(String param1, String param2) {
         ChatSettings fragment = new ChatSettings();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -49,16 +37,85 @@ public class ChatSettings extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat_settings, container, false);
+        binding = FragmentChatSettingsBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        names.add("Gehari");
+        names.add("Justin");
+        names.add("Fabi");
+        names.add("Caleb");
+        names.add("Jiale");
+        names.add("Isa");
+
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter = new ChatAdapter();
+        binding.recyclerView.setAdapter(adapter);
+
+        binding.nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toChat();
+            }
+        });
+    }
+
+    ChatSettingsListener mListener;
+
+    public interface ChatSettingsListener {
+        void toChat();
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        mListener = (ChatSettingsListener) context;
+    }
+
+    ChatAdapter adapter;
+    ArrayList<String> names = new ArrayList<>();
+
+    class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder> {
+        @NonNull
+        @Override
+        public ChatViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            ChatSettingsRecyclerViewBinding itemBinding = ChatSettingsRecyclerViewBinding.inflate(getLayoutInflater(), parent, false);
+            return new ChatViewHolder(itemBinding);
+        }
+
+        @Override
+        public int getItemCount() {
+            return names.size();
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull ChatViewHolder holder, int position) {
+            String name = names.get(position);
+            holder.setupUI(name);
+        }
+
+        class ChatViewHolder extends RecyclerView.ViewHolder {
+            ChatSettingsRecyclerViewBinding itemBinding;
+            String mName;
+
+            public ChatViewHolder(ChatSettingsRecyclerViewBinding itemBinding) {
+                super(itemBinding.getRoot());
+                this.itemBinding = itemBinding;
+            }
+
+            public void setupUI(String name) {
+                mName = name;
+                itemBinding.userNameText.setText(name);
+            }
+        }
+    }
+
 }
