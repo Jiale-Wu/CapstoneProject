@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.capstoneproject.databinding.FragmentGroupCreationBinding;
 import com.example.capstoneproject.databinding.FragmentHomeScreenBinding;
@@ -52,12 +53,48 @@ public class GroupCreation extends Fragment {
                 mListener.goToChatSettings();
             }
         });
+        binding.homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toHome();
+            }
+        });
+        binding.notificationsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toNotifications();
+            }
+        });
+        binding.eventsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toEvents();
+            }
+        });
+        binding.chatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toChat();
+            }
+        });
+        binding.profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toProfile();
+            }
+        });
+
     }
 
     GroupCreationListener mListener;
 
     public interface GroupCreationListener {
         void goToChatSettings();
+        void toNotifications();
+        void toEvents();
+        void toChat();
+        void toProfile();
+        void toHome();
     }
 
     @Override
