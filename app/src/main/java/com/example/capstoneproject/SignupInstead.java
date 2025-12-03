@@ -79,6 +79,24 @@ public class SignupInstead extends Fragment {
                 mListener.back();
             }
         });
+        binding.facebook3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toHome();
+            }
+        });
+        binding.gmail3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toHome();
+            }
+        });
+        binding.yahoo3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toHome();
+            }
+        });
     }
     SignupInsteadListener mListener;
 
@@ -90,5 +108,6 @@ public class SignupInstead extends Fragment {
 
     public interface SignupInsteadListener {
         void back();
+        void toHome();
     }
 }

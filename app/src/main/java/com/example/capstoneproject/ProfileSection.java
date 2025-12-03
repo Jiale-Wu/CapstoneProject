@@ -121,6 +121,12 @@ public class ProfileSection extends Fragment {
                 mListener.toChangePFP();
             }
         });
+        binding.logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toSignin();
+            }
+        });
     }
 
     ProfileSectionListener mListener;
@@ -139,5 +145,6 @@ public class ProfileSection extends Fragment {
         void toHome();
         void toSettings();
         void toChangePFP();
+        void toSignin();
     }
 }

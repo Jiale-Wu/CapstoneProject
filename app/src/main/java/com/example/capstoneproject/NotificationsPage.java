@@ -103,6 +103,30 @@ public class NotificationsPage extends Fragment {
                 mListener.toProfile();
             }
         });
+        binding.imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toChat();
+            }
+        });
+        binding.imageView10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toChat();
+            }
+        });
+        binding.imageView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toChat();
+            }
+        });
+        binding.imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toChat();
+            }
+        });
     }
 
     NotificationsListener mListener;

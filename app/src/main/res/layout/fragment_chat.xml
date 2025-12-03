@@ -70,18 +70,6 @@
         app:layout_constraintVertical_bias="0.977" />
 
     <ImageView
-        android:id="@+id/messageBar"
-        android:layout_width="180dp"
-        android:layout_height="30dp"
-        android:src="@drawable/message_bar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.74"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975" />
-
-    <ImageView
         android:id="@+id/microphone"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -136,5 +124,21 @@
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/back"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="175dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/rounded_background"
+        android:ems="10"
+        android:hint="Write a message"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/microphone"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toEndOf="@+id/cameraRoll"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

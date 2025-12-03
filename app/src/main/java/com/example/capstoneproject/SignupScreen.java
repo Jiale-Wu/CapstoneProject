@@ -81,7 +81,7 @@ public class SignupScreen extends Fragment {
                     Toast.makeText(getActivity(), "Please fill in your credentials", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    mListener.SignupNext();
+                    mListener.SignupSuccess();
                 }
             }
         });
@@ -103,6 +103,7 @@ public class SignupScreen extends Fragment {
 
     interface SignupListener {
         void SignupNext();
+        void SignupSuccess();
         void back();
 
     }
