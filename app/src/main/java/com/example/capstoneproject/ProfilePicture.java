@@ -82,7 +82,7 @@ public class ProfilePicture extends Fragment {
         binding.imgEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                mListener.toChooseImage();
             }
         });
     }
@@ -96,5 +96,6 @@ public class ProfilePicture extends Fragment {
 
     interface ProfilePictureListener {
         void back();
+        void toChooseImage();
     }
 }

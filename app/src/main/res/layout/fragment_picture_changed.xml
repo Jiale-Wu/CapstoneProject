@@ -238,10 +238,11 @@
         android:id="@+id/infoGo"
         android:layout_width="25dp"
         android:layout_height="25dp"
+        android:layout_marginStart="208dp"
         android:layout_marginTop="112dp"
         android:src="@drawable/infogo"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        tools:layout_editor_absoluteX="349dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/usernameButton"

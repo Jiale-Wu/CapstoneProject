@@ -103,6 +103,12 @@ public class EventsPage extends Fragment {
                 mListener.toProfile();
             }
         });
+        binding.OrangeBand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toExampleBand();
+            }
+        });
     }
     EventsPageListener mListener;
 
@@ -118,5 +124,6 @@ public class EventsPage extends Fragment {
         void toChat();
         void toProfile();
         void toHome();
+        void toExampleBand();
     }
 }

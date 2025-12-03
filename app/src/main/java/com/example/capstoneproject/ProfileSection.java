@@ -121,7 +121,7 @@ public class ProfileSection extends Fragment {
                 mListener.toChangePFP();
             }
         });
-        binding.logoutButton.setOnClickListener(new View.OnClickListener() {
+        binding.cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mListener.toSignin();
