@@ -64,16 +64,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="137dp"
-        android:layout_height="139dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="140dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
-        tools:src="@tools:sample/avatars" />
-
-    <ImageView
         android:id="@+id/profilepicture_clicked"
         android:layout_width="140dp"
         android:layout_height="140dp"
@@ -118,5 +108,15 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="137dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView59"
+        app:srcCompat="@drawable/img_boy_profilepicture" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
