@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.capstoneproject.databinding.FragmentEventsPageBinding;
 import com.example.capstoneproject.databinding.FragmentProfileSectionBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -124,6 +125,7 @@ public class ProfileSection extends Fragment {
         binding.cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
                 mListener.toSignin();
             }
         });
