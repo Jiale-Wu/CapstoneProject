@@ -14,42 +14,22 @@ import android.widget.Toast;
 
 import com.example.capstoneproject.databinding.FragmentLoginCredentialsScreenBinding;
 import com.example.capstoneproject.databinding.FragmentLoginScreenBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Login_CredentialsScreen#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Login_CredentialsScreen extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     FragmentLoginCredentialsScreenBinding binding;
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public Login_CredentialsScreen() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Login_CredentialsScreen.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Login_CredentialsScreen newInstance(String param1, String param2) {
         Login_CredentialsScreen fragment = new Login_CredentialsScreen();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -57,10 +37,6 @@ public class Login_CredentialsScreen extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -76,10 +52,21 @@ public class Login_CredentialsScreen extends Fragment {
         binding.Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(binding.passwordText2.getText().toString().isEmpty() || binding.usernameText.getText().toString().isEmpty()){
+                String userName = binding.usernameText.getText().toString();
+                String password = binding.passwordText2.getText().toString();
+                if(password.isEmpty() || userName.isEmpty()){
                     Toast.makeText(getActivity(), "Please fill in credentials", Toast.LENGTH_SHORT).show();
                 }else{
-                    mListener.SignInNext();
+                    FirebaseAuth.getInstance().signInWithEmailAndPassword(userName, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                mListener.SignInNext();
+                            } else {
+                                Toast.makeText(getActivity(), task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
                 }
 
             }
