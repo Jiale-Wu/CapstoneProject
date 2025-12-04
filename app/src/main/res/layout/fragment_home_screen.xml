@@ -99,6 +99,7 @@
 
         <!-- Card 1: Interaction Matrix -->
         <LinearLayout
+            android:id="@+id/teamProject"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"

@@ -81,6 +81,12 @@ public class HomeScreen extends Fragment {
                 mListener.createBand();
             }
         });
+        binding.teamProject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.toInteractionMatrix();
+            }
+        });
     }
 
     HomeScreenListener mListener;
@@ -98,5 +104,6 @@ public class HomeScreen extends Fragment {
         void toProfile();
         void toHome();
         void createBand();
+        void toInteractionMatrix();
     }
 }
