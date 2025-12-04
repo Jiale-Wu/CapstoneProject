@@ -8,6 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity implements LoginScreen.LoginListener, SignupScreen.SignupListener, HomeScreen.HomeScreenListener,
         NotificationsPage.NotificationsListener, EventsPage.EventsPageListener, ChatFragment.ChatListener, ProfileSection.ProfileSectionListener ,
         Login_CredentialsScreen.LoginCredentialsListener, RecoveryScreen.RecoveryScreenListener, Settings.SettingsListener, ProfilePicture.ProfilePictureListener, AccountDetails.AccDetailListener,
@@ -24,10 +26,18 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.main, new LoginScreen())
-                .commit();
 
+
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        if (mAuth.getCurrentUser() == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.main, new LoginScreen())
+                    .commit();
+        } else {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.main, new HomeScreen())
+                    .commit();
+        }
     }
 
     @Override
@@ -50,19 +60,6 @@ public class MainActivity extends AppCompatActivity implements LoginScreen.Login
     public void LoginMoreOptions() {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.main, new SignupInstead())
-                .addToBackStack(null)
-                .commit();
-    }
-
-    @Override
-    public void SignupNext() {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    @Override
-    public void SignupSuccess() {
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.main, new AccountCreated())
                 .addToBackStack(null)
                 .commit();
     }
