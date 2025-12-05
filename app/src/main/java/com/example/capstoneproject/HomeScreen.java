@@ -1,5 +1,7 @@
 package com.example.capstoneproject;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 import android.content.Context;
 import android.os.Bundle;
 
@@ -10,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.capstoneproject.databinding.FragmentHomeScreenBinding;
 
@@ -87,6 +90,17 @@ public class HomeScreen extends Fragment {
                 mListener.toInteractionMatrix();
             }
         });
+        binding.searchIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String title = binding.searchBar.getText().toString();
+                if (!title.isEmpty()) {
+                    mListener.toExampleBand();
+                } else {
+                    Toast.makeText(getActivity(), "Please enter a Band name", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     HomeScreenListener mListener;
@@ -105,5 +119,6 @@ public class HomeScreen extends Fragment {
         void toHome();
         void createBand();
         void toInteractionMatrix();
+        void toExampleBand();
     }
 }
