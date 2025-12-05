@@ -72,7 +72,7 @@ public class SignupScreen extends Fragment {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
-                                            mListener.toHome();
+                                            mListener.toPermissions();
                                         } else {
                                             Toast.makeText(getActivity(), task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                                         }
@@ -105,6 +105,8 @@ public class SignupScreen extends Fragment {
     interface SignupListener {
         void toHome();
         void back();
+
+        void toPermissions();
 
     }
 }
